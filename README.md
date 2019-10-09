@@ -1,6 +1,3 @@
 # 05-Space-Shooter
-My solution to the space shooter project:
-
-This was an example of a possible solution to the space shooter project for BL-MSCH-C220. I put this together as an exercise to explain the way I would approach a project like this. 
-
-A video that accompanies this project (with voice-over commentary—sorry about my allergies!) is available here: [https://www.youtube.com/watch?v=0480MSwW-zo](https://www.youtube.com/watch?v=0480MSwW-zo).
+Space shooter game design assignment for C220. 
+In this project I praticed how to build a actual space shooter game. Enemy can shoot in the game and if the player have collision with the enemy bullet player hp reduce. If the player killed all the enemy, the player win, and If the player's hp drop to 0, the player lose.

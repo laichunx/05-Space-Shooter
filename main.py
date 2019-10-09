@@ -7,8 +7,8 @@ logging.basicConfig(format='[%(filename)s:%(lineno)d] %(message)s', level=loggin
 logger = logging.getLogger(__name__)
 
 # Constants
-SCREEN_WIDTH = 1920
-SCREEN_HEIGHT = 1080
+SCREEN_WIDTH = 1280
+SCREEN_HEIGHT = 720
 MARGIN = 50
 SCREEN_TITLE = "Space Shooter Example"
 
@@ -18,7 +18,8 @@ SHIP_HP = 100
 SHIP_SCALE = 0.5
 SHIP_MAX_Y = SCREEN_HEIGHT // 3
 
-BULLET_SCALE = 0.5
+ENEMY_BULLET_SCALE = 0.1
+BULLET_SCALE = 0.1
 BULLET_DAMAGE = 10
 BULLET_SPEED = 10
 
@@ -141,8 +142,8 @@ class Window(arcade.Window):
         self.player_list.append(self.player)
         self.level = 0
         self.levels = [
-            ("Level 1","assets/nebula.jpg",NUM_ENEMIES,1)
-            ,("Level 2","assets/nebula2.jpg",NUM_ENEMIES+3,1.5)
+            ("Level 1","assets/City1.jpg",NUM_ENEMIES,1)
+            ,("Level 2","assets/City2.jpg",NUM_ENEMIES+3,1.5)
         ]
 
 
@@ -235,7 +236,7 @@ class Window(arcade.Window):
         x = enemy.center_x
         y = enemy.center_y - (self.player.height // 2)
         dy = ENEMY_BULLET_SPEED
-        bullet = Bullet(image, BULLET_SCALE, x, y, 0, dy, ENEMY_BULLET_DAMAGE)
+        bullet = Bullet(image, ENEMY_BULLET_SCALE, x, y, 0, dy, ENEMY_BULLET_DAMAGE)
         self.enemy_bullet_list.append(bullet)
 
 def main():
