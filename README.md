@@ -1,3 +1,4 @@
 # 05-Space-Shooter
 Space shooter game design assignment for C220. 
 In this project I praticed how to build a actual space shooter game. Enemy can shoot in the game and if the player have collision with the enemy bullet player hp reduce. If the player killed all the enemy, the player win, and If the player's hp drop to 0, the player lose.
+The weapon will change after the player score 80 points which make killing enemy more easier. Since the game adding the score with time, so if the player play really slow, the weapon improvement can help. Moreover, I changed the shooting on click into shoot automatically because the player should be shoot automatically in the traditional space shooter game.

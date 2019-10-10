@@ -38,6 +38,7 @@ ENEMY_PROB_CHANGE_POS = 0.1
 
 ENEMY_BULLET_SPEED = -4
 ENEMY_BULLET_DAMAGE = 4
+counter = 0
 
 #create a little function for returning the sign of an expression
 sign = lambda x: x and (1, -1)[x < 0]
@@ -163,6 +164,7 @@ class Window(arcade.Window):
 
 
     def update(self, delta_time):
+        global counter
         if self.playing:
             self.player_list.update()
             self.enemy_list.update()
@@ -170,6 +172,9 @@ class Window(arcade.Window):
             self.enemy_bullet_list.update()
 
             self.score += SCORE_INCREASE
+            counter = counter + 1
+            if(counter % 10 == 0):
+                self.shoot_bullet()
 
             for e in self.enemy_list:
                 if random.random() < ENEMY_PROB_SHOOT:
@@ -224,12 +229,20 @@ class Window(arcade.Window):
         self.shoot_bullet()
 
     def shoot_bullet(self):
-        image = "assets/bullet.png"
-        x = self.player.center_x
-        y = self.player.center_y + (self.player.height // 2)
-        dy = BULLET_SPEED
-        bullet = Bullet(image, BULLET_SCALE, x, y, 0, dy, BULLET_DAMAGE)
-        self.bullet_list.append(bullet)
+        if(self.score<=80):
+            image = "assets/bullet.png"
+            x = self.player.center_x
+            y = self.player.center_y + (self.player.height // 2)
+            dy = BULLET_SPEED
+            bullet = Bullet(image, BULLET_SCALE, x, y, 0, dy, BULLET_DAMAGE)
+            self.bullet_list.append(bullet)
+        else:
+            image = "assets/bullet2.png"
+            x = self.player.center_x
+            y = self.player.center_y + (self.player.height // 2)
+            dy = BULLET_SPEED + 20
+            bullet = Bullet(image, BULLET_SCALE + 0.1 , x, y, 0, dy, BULLET_DAMAGE)
+            self.bullet_list.append(bullet)
 
     def shoot_enemy_bullet(self,enemy):
         image = "assets/enemy_bullet.png"
