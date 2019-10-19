@@ -1,0 +1,37 @@
+Name: Alex Ruanto
+Date: 10/19/2019
+Project: Space Shooter
+Peer's repository:  https://github.com/laichunx/05-Space-Shooter.git
+
+
+
+What is something you learned by reviewing your peer's project?
+How to create sequential levels in pip arcade
+ 
+
+What is something you saw in your peer's project that you would like to apply to your own programming projects?
+The structuring of the code, as well as the visual style
+ 
+
+What suggestions would you have for your peer to improve his/her code?
+Better commenting could help to make it more clear what the code itself is actually doing within the different functions. Also at some point the program due to a IndexError: list index out of range
+ 
+
+What could have been clearer or better commented?
+The majority of the code is lacking in comments so it could use a lot more commenting
+ 
+
+Was there anything in the code that was confusing to you? If so, what?
+Not particularly
+ 
+
+Does the repository contain an appropriate LICENSE?
+Yes
+ 
+
+What is something he/she could add to the README.md to make it more descriptive?
+At what level does the game technically end, if each level is won by killing all the enemies
+ 
+
+Pay a compliment to your peer based on the quality of his/her code.
+Code is well structured and professional looking
